@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #f6f0f0, #14668f);
+  background: url(bg.jpg);
+
+}
+
+.clock-container {
+  position: relative;
+  background-color: rgba(142, 127, 127,4); /* Solid background for the clock container */
+  padding: 50px;
+  border-radius: 10px;
+}
+  
+.clock-container::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Adjust to ensure blur doesn't overlap clock box */
+  left: -10px; /* Adjust to ensure blur doesn't overlap clock box */
+  right: -10px; /* Adjust to ensure blur doesn't overlap clock box */
+  bottom: -10px; /* Adjust to ensure blur doesn't overlap clock box */
+  
+ 
+  border-radius: inherit;
+}
+  
+
+}
+
+.clock {
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  color: #fff;
+  
+  
+  
+}
+
+/* Create a pseudo-element for the blur effect */
+.clock::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Adjust to ensure blur doesn't overlap clock box */
+  left: -10px; /* Adjust to ensure blur doesn't overlap clock box */
+  right: -10px; /* Adjust to ensure blur doesn't overlap clock box */
+  bottom: -10px; /* Adjust to ensure blur doesn't overlap clock box */
+  background: inherit;
+  filter: blur(10px);
+  border-radius: inherit;
+ 
+}
